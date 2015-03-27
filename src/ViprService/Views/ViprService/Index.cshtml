@@ -1,0 +1,27 @@
+﻿@model ICollection<ViprService.Models.Configuration>
+@{
+    ViewBag.Title = "Configurations";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Config
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConfigurationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConfigurationUrl)
+            </td>
+        </tr>
+    }
+</table>
+
